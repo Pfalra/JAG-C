@@ -1,0 +1,43 @@
+*********************************************************************
+*  (C)  Copyright  TOSHIBA CORPORATION  2016
+*  Date                 :26/08/2016
+*  File name            :CRS01.lib
+*  Part number          :CRS01
+*  Parameter ver.       :Ver.1
+*  Simulator            :PSpice
+*  Model call name      :CRS01
+*  TNOM                 :25 degree
+*  Pin Assign           :1=Anode 2=Cathode
+*
+* This PSpice model is provided with OLB file. The symbol is
+* simplified for PSpice simulation. It is different from original
+* device. Please check the technical data sheet or Toshiba website.
+*********************************************************************
+.SUBCKT CRS01 1 2
+D1 1 2 CRS01
+D2 1 2 PDIODE1
+.MODEL CRS01 D
++ IS = 1.7928e-05
++ N = 1.2036
++ RS = 0.087977
++ BV = 30
++ IBV = 1E-10
++ CJO = 1.8163e-10
++ M = 0.46127
++ VJ = 0.34557
++ TT = 1.7e-08
++ TNOM = 25
++ XTI = -13.7786
+.MODEL PDIODE1 D
++ IS = 1.1899e-010
++ N = 0.66031
++ RS = 0.20363
++ BV = 400
++ IBV = 1E-10
++ CJO = 0
++ M = 0.5
++ VJ = 1
++ TT = 0
++ TNOM = 25
++ XTI = -50
+.ENDS
